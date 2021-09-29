@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ title }}</title>
+    
+
+</head>
+<body style = "background-color: black;">
+    <div class="container">
+        <div class="heading">
+            <h1 style = "color: whitesmoke; font-family: Arial;">{{ title }} </h1>
+                 </div>
+
+        <div class="gallery">
+            <div class="gallerySection">
+
+            {% for album in albums %}
+        
+            <a href="https://open.spotify.com/track/{{album.link}}">
+            <!-- <a href = "{{album.preview}}" alt="{{album.title}}"></a> -->
+            <img src="{{  album.thumbnail }}"  style = "width:200px; height:200px;">
+        </a>
+        
+            <!-- <span style = "font-size: 10px; color: whitesmoke; font-family: Arial; display: inline-block;">{{album.title}}</span> -->
+        
+       
+         
+        {% endfor %}
+    </div> 
+        </div>
+    </div>
+    
+    
+</body>
+</html>
